@@ -34,12 +34,13 @@ const Widget = (props) => {
     return (
         <div className={s.widgetWrapper}>
             <div className={s.widget}>
+                <div>
                 <select name="" onChange={changed} className={s.urChoice}>
                     <option value={1}>По местоположению</option>
                     <option value={2}>По городу</option>
                 </select>
                 {city &&
-                    <input type={"text"} onChange={e => setInputValue(e.target.value)} value={inputValue}/>}
+                    <input type={"text"} className={s.cityInput} onChange={e => setInputValue(e.target.value)} value={inputValue}/>}</div>
                 {props.data.fetchedError
                     ? <Preloader/>
                     : <div>

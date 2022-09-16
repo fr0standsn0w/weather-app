@@ -1,44 +1,83 @@
-body{
-    background-color: #636076;
+*{
+    animation: widget 0.3s ease-in;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #396e68;
     height: 100vh;
 }
-.widgetWrapper{
+
+.widgetWrapper {
     height: 100%;
     display: flex;
     align-items: center;
 }
-.widget{
+
+.widget {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255,255,255,0.25);
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.38);
     border: 1px solid white;
     border-radius: 30px;
     padding: 25px 30px;
     min-width: 300px;
-    min-height: 400px;
+    min-height: 450px;
     margin: 0 auto;
+    animation: widget 0.3s ease-in;
 }
-.widget p{
+
+@keyframes widget {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.widget p {
     font-size: 28px;
-    font-family: 'Roboto', sans-serif;
 }
-.iconContainer{
+
+.iconContainer {
     max-width: 100px;
     margin: 0 auto;
 }
-.iconContainer img{
+
+.iconContainer img {
     width: 100%;
 }
-.fetchingWrapper{
+
+.fetchingWrapper {
     display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     height: 100%;
+    animation: widget 0.3s ease-in;
 }
-.urChoice{
+
+.urChoice {
     padding: 5px 15px 5px 10px;
     border-radius: 7px;
-    font-family: 'Roboto', sans-serif;
+}
+
+.cityInput {
+    border: #545454 1px solid;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 5px 18px;
+    display: block;
+    animation: widget 0.3s ease-in;
+    /*font-size: 14px;*/
 }
